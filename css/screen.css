@@ -469,7 +469,7 @@ fieldset {
   padding-top: 1em; }
 /* line 273, ../scss/screen.scss */
 #footer div p {
-  width: 81.33%;
+  width: 97.996%;
   margin: 0 1%;
   margin: 0 auto;
   text-align: center; }
@@ -502,94 +502,97 @@ fieldset {
     margin: 0 1%;
     margin-left: 0;
     float: left; }
-  /* line 313, ../scss/screen.scss */
+  /* line 314, ../scss/screen.scss */
   #last_update article .produits img, #proposal article .produits img {
     width: 100%;
     text-align: top; }
-  /* line 320, ../scss/screen.scss */
+  /* line 321, ../scss/screen.scss */
   #last_update article h3, #last_update article p, #last_update article .pannier, #proposal article h3, #proposal article p, #proposal article .pannier {
     width: 56.331%;
     margin: 0 1%;
     float: right;
     margin-bottom: 1%; }
-  /* line 327, ../scss/screen.scss */
+  /* line 328, ../scss/screen.scss */
   #last_update article p, #last_update article .pannier, #proposal article p, #proposal article .pannier {
     margin-top: 1%; } }
 @media only screen and (min-width: 500px) {
-  /* line 342, ../scss/screen.scss */
+  /* line 343, ../scss/screen.scss */
   #header div nav a {
     padding: 1.35em 0; }
 
-  /* line 348, ../scss/screen.scss */
+  /* line 349, ../scss/screen.scss */
   #last_update, #proposal {
     margin-top: 2%; }
-  /* line 352, ../scss/screen.scss */
+  /* line 353, ../scss/screen.scss */
   #last_update h2, #proposal h2 {
     margin-bottom: 1%; }
-  /* line 357, ../scss/screen.scss */
+  /* line 358, ../scss/screen.scss */
   #last_update article, #proposal article {
     width: 47.998%;
     margin: 0 1%;
     margin-top: 2%;
     margin-bottom: 2%;
     float: left; }
-  /* line 365, ../scss/screen.scss */
+  /* line 366, ../scss/screen.scss */
   #last_update article .produits, #proposal article .produits {
     width: 97.996%;
     margin: 0 1%; }
-  /* line 370, ../scss/screen.scss */
+  /* line 371, ../scss/screen.scss */
   #last_update article h3, #last_update article p, #last_update article .pannier, #proposal article h3, #proposal article p, #proposal article .pannier {
     width: 97.996%;
     margin: 0 1%;
     float: none; }
-  /* line 378, ../scss/screen.scss */
+  /* line 379, ../scss/screen.scss */
   #last_update .left, #proposal .left {
     margin-left: 0;
     margin-right: 2%; }
-  /* line 384, ../scss/screen.scss */
+  /* line 385, ../scss/screen.scss */
   #last_update .right, #proposal .right {
     margin-right: 0;
     margin-left: 2%; } }
 @media only screen and (min-width: 600px) {
-  /* line 394, ../scss/screen.scss */
+  /* line 395, ../scss/screen.scss */
   #logo {
     width: 14.666%;
     margin: 0 1%; }
 
-  /* line 399, ../scss/screen.scss */
+  /* line 400, ../scss/screen.scss */
   #lang {
     width: 14.666%;
     margin: 0 1%;
     text-align: center; }
 
-  /* line 405, ../scss/screen.scss */
+  /* line 406, ../scss/screen.scss */
   #account {
     width: 31.332%;
     margin: 0 1%;
     float: right;
     text-align: right;
     margin-right: 0; }
-  /* line 412, ../scss/screen.scss */
+  /* line 413, ../scss/screen.scss */
   #account a {
     width: 39.665%;
     margin: 0 1%;
     margin: 0; }
-  /* line 418, ../scss/screen.scss */
+  /* line 419, ../scss/screen.scss */
   #account a:last-child {
     width: 56.331%;
     margin: 0 1%;
     margin-right: 0; } }
 @media only screen and (min-width: 760px) {
-  /* line 428, ../scss/screen.scss */
+  /* line 429, ../scss/screen.scss */
   #header div {
     padding: 2% 0; }
+  /* line 435, ../scss/screen.scss */
+  #header div nav a {
+    padding: 1.2em 0; }
 
-  /* line 433, ../scss/screen.scss */
+  /* line 442, ../scss/screen.scss */
   #account {
     width: 22.999%;
     margin: 0 1%; }
 
-  /* line 438, ../scss/screen.scss */
+  /* line 447, ../scss/screen.scss */
   #main_menu {
     width: 22.999%;
     margin: 0 1%;
@@ -601,18 +604,18 @@ fieldset {
     display: block;
     overflow: hidden;
     height: 0px; }
-  /* line 446, ../scss/screen.scss */
+  /* line 455, ../scss/screen.scss */
   #main_menu form input, #main_menu form input[type="submit"] {
     width: 100%;
     margin: 0 0 2% 0; }
-  /* line 455, ../scss/screen.scss */
+  /* line 464, ../scss/screen.scss */
   #main_menu #menu li {
     width: 100%;
     float: none;
     text-align: left;
     margin: 2% 0; }
 
-  /* line 465, ../scss/screen.scss */
+  /* line 474, ../scss/screen.scss */
   #content {
     width: 72.997%;
     margin: 0 1%;
@@ -626,14 +629,19 @@ fieldset {
     overflow: hidden;
     height: 0px; }
 
-  /* line 473, ../scss/screen.scss */
-  #last_update {
+  /* line 482, ../scss/screen.scss */
+  #last_update, #proposal {
     margin-top: 0; }
-  /* line 477, ../scss/screen.scss */
-  #last_update article {
+  /* line 486, ../scss/screen.scss */
+  #last_update article, #proposal article {
     width: 47.998%;
-    margin: 0 1%; }
-  /* line 481, ../scss/screen.scss */
-  #last_update article .pannier, #last_update article p, #last_update article h3, #last_update article .produits {
+    margin: 0 1%;
+    margin-bottom: 4%; }
+  /* line 491, ../scss/screen.scss */
+  #last_update article .pannier, #last_update article p, #last_update article h3, #last_update article .produits, #proposal article .pannier, #proposal article p, #proposal article h3, #proposal article .produits {
     width: 100%;
-    margin: 0; } }
+    margin: 0;
+    float: none; }
+  /* line 498, ../scss/screen.scss */
+  #last_update article h3, #proposal article h3 {
+    margin-top: 2%; } }

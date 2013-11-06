@@ -272,7 +272,7 @@ fieldset {
 
 		& p {
 
-			@include generateGrid(10);
+			@include generateGrid(12);
 			margin: 0 auto;
 			text-align: center;
 		}
@@ -309,6 +309,7 @@ fieldset {
 				@include generateGrid(5);
 				margin-left: 0;
 				float: left;
+
 
 				& img {
 
@@ -428,6 +429,14 @@ fieldset {
 	#header div {
 
 		padding: $gutter 0;
+
+		& nav {
+
+			& a {
+
+				padding: 1.2em 0;
+			}
+		}
 	}
 
 	#account {
@@ -470,18 +479,25 @@ fieldset {
 		float: left;
 	}
 
-	#last_update {
+	#last_update, #proposal {
 
 		margin-top: 0;
 
 		article {
 
 			@include generateGrid(6);
+			margin-bottom: $gutter*2;
 
-			.pannier, p, h3, .produits {
+			& .pannier, & p, & h3, & .produits {
 
 				width: 100%;
 				margin: 0;
+				float: none;
+			}
+
+			& h3 {
+
+				margin-top: $gutter;
 			}
 		}
 	}
