@@ -1,0 +1,491 @@
+@import "compass";
+@import "compass/layout.scss";
+@import "normalize";
+@import "mixins";
+
+/* Système de grille composé de 12 colonnes */
+
+/* max width 1430px */
+
+$maxWidth : 1440px;
+
+/* Goutière  10px */
+$gutter : 2%;
+
+/* Taille colonne 110px */
+$colWidth : 6.333%;
+
+@import "functions";
+
+/*  Sticky footer  */
+@include sticky-footer( 50px, "#container", "#layout_footer", "#footer" );
+
+/* Titre masqué */
+
+.hidden {
+	position: absolute;
+	left: -9999px;
+}
+
+/* Réglage générale */
+	
+	/* Body */
+
+body {
+
+	font: normal 15px Helvetica, Arial, Sans-Serif;
+	line-height: 1.5;
+}
+
+fieldset {
+
+	border: none;
+	padding: 0;
+}
+
+
+
+/* Header */
+
+#header div {
+
+	@include generateGrid(12);
+
+	@include clearBoth;
+
+	padding: 0.25em 0;
+
+	& nav {
+	
+		display: block;
+
+		& a {
+
+			padding: 0.55em 0;
+			font-size: 1.1em;
+		}
+	}
+
+	& a {
+
+		display: block;
+		float: left;			
+	}
+}
+
+#logo {
+
+	@include generateGrid(3);
+	@include clearBoth;
+	padding: 0;
+
+	& img {
+
+		@include generateGrid(12);
+		margin: 0;
+		vertical-align: top;
+	}
+}
+
+#lang {
+
+	@include generateGrid(3);
+	float: left;
+
+	& a {
+
+		@include generateGrid(6);
+		float: left;
+	}
+}
+
+#account {
+
+	@include generateGrid(6);
+	float: right;
+
+	& a{
+
+		@include generateGrid(5);
+		margin: 0;
+	}
+
+	& a:last-child {
+
+		@include generateGrid(7);
+	}
+}
+
+#container {
+
+	display: block;
+	@include generateGrid(12);
+	margin: $gutter auto;
+}
+
+/*  Menu */
+
+#main_menu {
+
+	@include generateGrid(12);
+
+	& form {
+		
+		width: 100%;
+		margin-top: $gutter;
+
+		& fieldset {
+
+			margin: 0;
+		}
+
+		& label {
+
+			display: none;
+		}
+
+		& input {
+
+			@include generateGrid(8);
+			margin-left: 0;
+			@include box-sizing( border-box );
+		}
+
+		& input[type="submit"] {
+
+			@include generateGrid(4);
+			margin-right: 0;
+		}
+	}
+
+	& nav {
+
+		margin-top: $gutter*2;
+	}
+
+	& ul {
+
+		padding: 0;
+		margin: 0;
+		@include clearBoth;
+
+		& li {
+
+			width: 47.5%;
+			display: inline-block;
+			float: left;
+		
+			@include box-sizing( border-box );			
+
+			&:nth-child( odd ) {
+
+				text-align: right;
+				margin-right: $gutter;
+			}
+			
+			&:nth-child( even ) {
+
+				margin-left: 3%;
+			}
+
+		}
+	}
+}
+
+/* Content */ 
+
+#content {
+
+	@include generateGrid(12);
+}
+
+#last_update, #proposal {
+
+	margin-bottom: $gutter;
+
+	& h2 {
+
+		margin: 0 0 $gutter*2 0;
+	}
+
+	& article {
+		
+		width: 100%;
+		margin: 0 0 $gutter*2 0;
+
+		& figure {
+
+			display: inline-block;
+		} 
+
+		.produits, figure {
+
+			display: block;
+		}
+
+		& img {
+
+			width: 100%;
+			vertical-align: middle;
+		}
+
+		& .pannier {
+			
+			display: block;
+			text-align: center;
+		}
+
+		& h3 {
+
+			margin: 0 0 $gutter 0;
+		}
+
+		& p, & .pannier {
+
+			margin: $gutter/2 0;
+		}
+
+		.prix {
+
+			text-align: center;
+			font-size: 1.3em;
+			font-weight: bold;
+		}
+
+	}
+	
+}
+
+#banner {
+
+	display: none;
+}
+
+/* Footer */
+
+#footer {
+	
+	& div {
+	
+		@include generateGrid(12);
+		padding-top: 1em;
+
+		& p {
+
+			@include generateGrid(10);
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+}
+
+
+
+@media only screen and ( min-width : 400px ) {
+
+	*{
+		transition:all .5s linear; 
+		-o-transition:all .5s linear; 
+		-moz-transition:all .5s linear; 
+		-webkit-transition:all .5s linear;
+	}
+
+	#last_update, #proposal {
+
+		& h2 {
+
+			margin-bottom: $gutter*2;
+		}
+		
+		& article {
+			
+			width: 100%;
+			margin-bottom: $gutter*2;
+			@include clearBoth;
+
+			& .produits {
+
+				@include generateGrid(5);
+				margin-left: 0;
+				float: left;
+
+				& img {
+
+					width: 100%;
+					text-align: top;
+				}
+			}
+
+			& h3, & p, & .pannier {
+
+				@include generateGrid(7);				
+				float: right;
+				margin-bottom: $gutter/2;
+			}
+
+			& p, & .pannier {
+
+				margin-top: $gutter/2;
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and ( min-width : 500px ) {
+
+	#header div {
+	
+		nav a {
+
+			padding: 1.35em 0;
+		}
+	}
+
+	#last_update, #proposal {
+
+		margin-top: $gutter;
+
+		& h2 {
+
+			margin-bottom: $gutter/2;
+		}		
+
+		& article {
+
+			@include generateGrid(6);
+			margin-top: $gutter;
+			margin-bottom: $gutter;
+
+			float: left;
+
+			& .produits {
+
+				@include generateGrid(12);
+			}
+
+			& h3, & p, & .pannier {
+
+				@include generateGrid(12);
+				float: none;
+			}
+
+		}
+
+		.left {
+
+			margin-left: 0;
+			margin-right: $gutter;
+		}
+
+		.right {
+
+			margin-right: 0;
+			margin-left: $gutter;
+		}
+	}	
+}
+
+@media only screen and ( min-width : 600px ) {
+
+	#logo {
+
+		@include generateGrid(2);
+	}
+
+	#lang {
+
+		@include generateGrid(2);
+		text-align: center;
+	}
+
+	#account {
+
+		@include generateGrid(4);
+		float: right;
+		text-align: right;
+		margin-right: 0;
+
+		& a{
+
+			@include generateGrid(5);
+			margin: 0;
+		}
+
+		& a:last-child {
+
+			@include generateGrid(7);
+			margin-right: 0;
+		}
+	}
+}
+
+@media only screen and ( min-width : 760px ) {
+
+	#header div {
+
+		padding: $gutter 0;
+	}
+
+	#account {
+
+		@include generateGrid(3);
+	}
+
+	#main_menu {
+
+		@include generateGrid(3);
+		@include clearBoth;
+		float: left;
+
+		& form {
+
+			& input, & input[type="submit"] {
+
+				width: 100%;
+				margin: 0 0 $gutter 0;
+			}
+		}
+
+		& #menu {
+
+			& li {
+				
+				width: 100%;
+				float: none;
+				text-align: left;
+				margin: $gutter 0;
+			}
+		}
+	}
+
+	#content {
+	
+		@include generateGrid(9);
+		margin-right: 0;
+		@include clearBoth;
+		float: left;
+	}
+
+	#last_update {
+
+		margin-top: 0;
+
+		article {
+
+			@include generateGrid(6);
+
+			.pannier, p, h3, .produits {
+
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+
+
+
+}

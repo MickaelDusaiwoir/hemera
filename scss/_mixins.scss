@@ -1,0 +1,17 @@
+@mixin generateGrid($nbCol){
+	
+	width : calculateGrid($nbCol);
+	margin: 0 $gutter/2;
+}
+
+@mixin clearBoth {
+
+	&:after {
+
+		clear: both;
+		content: "";	
+	    display: block;
+	    overflow: hidden;
+	    height: 0px;
+	}
+}

@@ -1,0 +1,4 @@
+@function calculateGrid($nbCol) {
+
+	@return ( $nbCol * $colWidth ) + ( ($nbCol - 1) * $gutter ) ;
+}
