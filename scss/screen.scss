@@ -44,7 +44,6 @@ fieldset {
 }
 
 
-
 /* Header */
 
 #header div {
@@ -121,6 +120,7 @@ fieldset {
 	display: block;
 	@include generateGrid(12);
 	margin: $gutter auto;
+	padding-top: $gutter/2;
 }
 
 /*  Menu */
@@ -199,7 +199,7 @@ fieldset {
 	@include generateGrid(12);
 }
 
-#last_update, #proposal {
+#last_update, #proposal, #collection {
 
 	margin-bottom: $gutter;
 
@@ -280,18 +280,16 @@ fieldset {
 
 }
 
+#container, #header div, #footer div {
+
+	max-width: 480px;
+	margin: 0 auto;
+}
 
 
 @media only screen and ( min-width : 400px ) {
 
-	*{
-		transition:all .5s linear; 
-		-o-transition:all .5s linear; 
-		-moz-transition:all .5s linear; 
-		-webkit-transition:all .5s linear;
-	}
-
-	#last_update, #proposal {
+	#last_update, #proposal, #collection {
 
 		& h2 {
 
@@ -336,7 +334,27 @@ fieldset {
 
 }
 
+@media only screen and ( min-width: 480px) {
+
+	#header div {
+
+		nav {
+
+			a {
+				padding: 1.15em 0;
+			}
+		}
+	}
+}
+
 @media only screen and ( min-width : 500px ) {
+
+	#container, #header div, #footer div {
+
+		max-width: 540px;
+		margin: 0 auto;
+	}
+
 
 	#header div {
 	
@@ -346,7 +364,14 @@ fieldset {
 		}
 	}
 
-	#last_update, #proposal {
+	#account {
+
+		a {
+			text-align: left;
+		}
+	}
+
+	#last_update, #proposal, #collection {
 
 		margin-top: $gutter;
 
@@ -392,6 +417,17 @@ fieldset {
 
 @media only screen and ( min-width : 600px ) {
 
+	#container, #header div, #footer div {
+
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	#container {
+
+		padding-top: 0;
+	}
+
 	#logo {
 
 		@include generateGrid(2);
@@ -425,6 +461,23 @@ fieldset {
 }
 
 @media only screen and ( min-width : 760px ) {
+
+	#container, #header div, #footer div {
+
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	#banner {
+
+		display: block;
+		width: 100%;
+
+		img {
+			
+			width: 100%;
+		}
+	}
 
 	#header div {
 
@@ -479,7 +532,7 @@ fieldset {
 		float: left;
 	}
 
-	#last_update, #proposal {
+	#last_update, #proposal, #collection {
 
 		margin-top: 0;
 
@@ -501,7 +554,245 @@ fieldset {
 			}
 		}
 	}
+}
+
+@media only screen and ( min-width : 960px ) {
+
+	#container, #header div, #footer div {
+
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	#header div {
+
+		padding: $gutter/2 0;
+	}
+
+	#logo {
+
+		figure {
+
+			@include generateGrid(9);
+		}
+	}
+	
+	#lang {
+
+		@include generateGrid(1);
+	}
+
+	#account {
+
+		@include generateGrid(2);
+		
+		& a {
+
+			@include generateGrid(4);
+			text-align: right;
+		}
+
+		& a:last-child {
+
+			@include generateGrid(8);
+		}
+
+	}
+
+	#main_menu {
+
+		#menu li {
+
+			font-size: 1.15em;
+		}
+
+		form {
+
+			& input {
+
+				@include generateGrid(7);
+				float: left;
+				margin: 0 $gutter 0 0;
+			}	
+
+			& input[type="submit"] {
+
+				@include generateGrid(5);
+				float: left;
+				margin: 0 0 0 $gutter 0 0;
+			}
+		}
+	}
+
+	#last_update, #proposal, #collection {
+
+		@include clearBoth;
+
+		& h2 {
+
+			margin-bottom: $gutter;
+		}
+
+		article {
+
+			@include generateGrid(4);
+		}
+
+		& .left, & .right {
+
+			margin: 0 0 $gutter 0;
+		}
+
+		& .num_2 {
+			margin: 0 $gutter*1.5 $gutter $gutter*1.5;
+		}
+	}
+}
+
+@media only screen and ( min-width : 1300px ) {
+
+	#container, #header div, #footer div {
+
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	#header div {
+
+		& nav {
+
+			a {
+
+				padding: 0.7em 0;
+			}
+		}
+	}
+
+	#logo {
+
+		@include generateGrid(1);
+
+		& figure {
+
+			@include generateGrid(12);
+
+			& img {
+
+				@include generateGrid(12);
+			}
+		} 
+	}
+}
+
+@media only screen and ( min-width : 1440px ) {
+
+	#account {
+		
+		@include generateGrid(2);
+	}
+
+	#last_update, #proposal, #collection {
+
+		article {
+
+			@include generateGrid(3);
+		}
+
+		& .num_2 {
+
+			margin: 0  ($gutter - ( $gutter/4 )) $gutter/2 ($gutter + ( $gutter/4 ) );
+		}
+
+		& .num_3 {
+
+			margin: 0  ($gutter + ( $gutter/4 )) $gutter/2 ($gutter - ( $gutter/4) );
+		}
+	}
+}
+
+@media only screen and ( min-width : 1600px ) {
 
 
 
+	#container, #header div, #footer div {
+
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	#header div {
+
+		nav {
+
+			a {
+
+				padding: 1em 0;
+			}
+		}
+	}
+
+	#main_menu {
+
+		form {
+
+			input {
+
+				@include generateGrid(8);
+			}
+
+			input[type="submit"] {
+
+				@include generateGrid(4);
+			}
+		}
+	}
+
+	#account {
+
+		a, a:last-child {
+			@include generateGrid(6);
+		}
+	}
+
+	#last_update, #proposal, #collection {
+
+		article {
+
+			h3, .pannier, p, .produits {
+
+				margin: $gutter 0;
+			}
+		}
+	}
+
+}
+
+@media only screen and ( min-width: 1920px ) {
+
+	#header div {
+
+		nav {
+
+			a {
+
+				padding: 1.35em 0;
+			}
+		}
+	}
+
+	#container, #header div, #footer div {
+
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+	
+}
+
+@media only screen and ( min-width: 2000px ) {
+
+	#container, #header div, #footer div {
+
+		max-width: 1920px;
+		margin: 0 auto;
+	}
 }
