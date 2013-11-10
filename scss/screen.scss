@@ -115,6 +115,16 @@ fieldset {
 	}
 }
 
+#ad_search {
+
+	margin-bottom: $gutter/2; 
+
+	h2 {
+
+		margin: $gutter 0 $gutter/2 0;
+	}
+}
+
 #container {
 
 	display: block;
@@ -199,7 +209,7 @@ fieldset {
 	@include generateGrid(12);
 }
 
-#last_update, #proposal, #collection {
+#last_update, #proposal, #collection, #sold {
 
 	margin-bottom: $gutter;
 
@@ -286,10 +296,82 @@ fieldset {
 	margin: 0 auto;
 }
 
+#article {
+
+	h2 {
+
+		@include generateGrid(12);
+		margin: $gutter $gutter/2;
+	}
+
+	img {
+
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	form {
+
+		@include generateGrid(8);
+		margin: 0 auto;
+
+		label, select, input {
+
+			@include generateGrid(6);
+			display: inline-block;
+			float: left;
+			margin-bottom: $gutter;
+			margin-top: $gutter;
+			@include box-sizing( border-box );
+			@include clearBoth;
+		}
+
+		select {
+
+			text-align: center;
+		}
+
+		input[type="submit"] {
+
+			@include generateGrid(12);
+			float: none;
+			margin-top: $gutter;
+		}
+	}
+
+	fieldset {
+
+		margin: 0;
+	}
+
+	#info {
+
+		p:last-child {
+
+			@include generateGrid(8);
+			margin: 0 auto;
+		}
+	}	
+
+	#prix {
+
+		font-size: 1.2em; 
+		font-weight: bold;
+		margin-right: $gutter/2;
+		font-style: normal;
+	}
+
+	#stock {
+
+		color: green;
+		font-size: 1.1em;
+	}
+}
+
 
 @media only screen and ( min-width : 400px ) {
 
-	#last_update, #proposal, #collection {
+	#last_update, #proposal, #collection, #sold {
 
 		& h2 {
 
@@ -329,6 +411,44 @@ fieldset {
 			}
 
 		}
+	}
+
+	#article {
+
+		h2 {
+
+			margin: $gutter/2 0;
+		}
+
+		a {
+
+			@include generateGrid(5);
+			margin-left: 0;
+			margin-right: $gutter;
+			@include clearBoth;
+			float: left;
+		}
+
+		#info {
+
+			@include generateGrid(7);
+			@include clearBoth;
+			margin: 0 0 $gutter/2 $gutter;
+			float: left;
+		}
+
+		#description {
+
+			margin: 0 0 $gutter/2 0;
+		}
+
+		form {
+		
+			@include clearBoth;
+			width: 100%;
+			float: right;
+			margin: $gutter 0;
+		}
 
 	}
 
@@ -342,6 +462,19 @@ fieldset {
 
 			a {
 				padding: 1.15em 0;
+			}
+		}
+	}
+
+	#article {
+		
+		@include clearBoth;
+
+		form {
+
+			label, select, input {
+
+				@include generateGrid(2);
 			}
 		}
 	}
@@ -371,7 +504,7 @@ fieldset {
 		}
 	}
 
-	#last_update, #proposal, #collection {
+	#last_update, #proposal, #collection, #sold {
 
 		margin-top: $gutter;
 
@@ -458,6 +591,22 @@ fieldset {
 			margin-right: 0;
 		}
 	}
+
+	#article {
+
+		#info p:last-child {
+
+			@include generateGrid(4);
+			margin: $gutter/2 auto 0 auto;
+		}
+
+		form {
+
+			@include generateGrid(7);
+			float: left;
+			margin: $gutter 0 0 $gutter;
+		}
+	}
 }
 
 @media only screen and ( min-width : 760px ) {
@@ -497,6 +646,7 @@ fieldset {
 		@include generateGrid(3);
 	}
 
+
 	#main_menu {
 
 		@include generateGrid(3);
@@ -522,6 +672,16 @@ fieldset {
 				margin: $gutter 0;
 			}
 		}
+
+		#ad_search {
+
+			li {
+
+				width: 100%;
+				text-align: left;
+				margin: $gutter 0;
+			}
+		}
 	}
 
 	#content {
@@ -532,7 +692,7 @@ fieldset {
 		float: left;
 	}
 
-	#last_update, #proposal, #collection {
+	#last_update, #proposal, #collection, #sold {
 
 		margin-top: 0;
 
@@ -552,6 +712,15 @@ fieldset {
 
 				margin-top: $gutter;
 			}
+		}
+	}
+
+	#article {
+
+		#info p:last-child {
+
+			@include generateGrid(6);
+			margin: $gutter auto 0 auto;
 		}
 	}
 }
@@ -624,7 +793,7 @@ fieldset {
 		}
 	}
 
-	#last_update, #proposal, #collection {
+	#last_update, #proposal, #collection, #sold {
 
 		@include clearBoth;
 
@@ -645,6 +814,58 @@ fieldset {
 
 		& .num_2 {
 			margin: 0 $gutter*1.5 $gutter $gutter*1.5;
+		}
+	}
+
+	#article {
+
+		margin-bottom: $gutter/2;
+
+		#info p:last-child {
+
+			@include generateGrid(4);
+			margin: $gutter auto 0 auto;
+		}
+	}
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+	#article {
+
+		a {
+
+			@include generateGrid(4);
+			margin: 0 $gutter 0 0;
+		}
+
+		#info {
+
+			@include generateGrid(6);
+
+			p:last-child {
+
+				@include generateGrid(4);
+				margin: 0 auto;
+			}
+		}
+
+		form {
+
+			@include generateGrid(2);
+
+			label, select, input {
+
+				@include generateGrid(6);
+			}
+
+			label {
+				margin: 0 $gutter $gutter*2 0;
+			}
+
+			select, input {
+				margin: 0 0 $gutter*2 $gutter;
+			}
 		}
 	}
 }
@@ -691,11 +912,16 @@ fieldset {
 		@include generateGrid(2);
 	}
 
-	#last_update, #proposal, #collection {
+	#last_update, #proposal, #collection, #sold {
 
 		article {
 
 			@include generateGrid(3);
+		}
+
+		h2 {
+
+			margin: $gutter/2 0;
 		}
 
 		& .num_2 {
@@ -738,11 +964,14 @@ fieldset {
 			input {
 
 				@include generateGrid(8);
+				margin: 0 $gutter 0 0;
 			}
 
 			input[type="submit"] {
 
 				@include generateGrid(4);
+
+				margin: 0 0 0 $gutter;
 			}
 		}
 	}
@@ -754,7 +983,7 @@ fieldset {
 		}
 	}
 
-	#last_update, #proposal, #collection {
+	#last_update, #proposal, #collection, #sold {
 
 		article {
 

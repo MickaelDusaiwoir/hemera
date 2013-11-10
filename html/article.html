@@ -3,13 +3,13 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Héméra - Notre collection</title>
+		<title>Héméra - Accueil</title>
 		<link rel="stylesheet" href="../css/screen.css">
 	</head>
 
 	<body>
 		
-		<h1 class="hidden" >Héméra - Notre collections</h1>
+		<h1 class="hidden" >Héméra - Accueil</h1>
 
 		<header id="header">
 
@@ -71,7 +71,7 @@
 					<ul>
 
 						<li>
-							<a href="#" title="Voir notre collection">Notre collection</a>
+							<a href="./collection.html" title="Voir notre collection">Notre collection</a>
 						</li>
 
 						<li>
@@ -90,28 +90,11 @@
 
 				</nav>
 
-				<section id="ad_search">
-
-					<h2>Cat&eacute;gories</h2>
-					
-					<ul>
-
-						<li class="colLeft"><a href="#" title="Toutes nos tuniques">Nos tunique</a></li>
-						<li class="colRight"><a href="#" title="Tous nos Tshirts">Nos tshirts</a></li>
-						<li class="colLeft"><a href="#" title="Tous nos pantalons">Nos pantalons</a></li>
-						<li class="colRight"><a href="#" title="Toutes nos jupes">Nos jupes</a></li>
-						<li class="colLeft"><a href="#" title="Toutes nos robes">Nos robes</a></li>
-						<li class="colRight"><a href="#" title="Tous nos accessoires">Nos accessoires</a></li>
-						
-					</ul>
-
-				</section>				
-
 			</section>
 
 			<section id="content" >
 
-				<h1 class="hidden">Nos produits</h1>
+				<h1 class="hidden">Présentation de l'article : nom de l'article</h1>
 				
 				<div id="banner">
 					<a href="#" title="se rendre sur la page d'accueil">
@@ -119,15 +102,67 @@
 					</a>
 				</div>
 				
-				<section id="collection">
-
+				<article id="article">
+				
 					<h2>
-						Notre collection
+						Nom de l'article
+					</h2>
+
+					<a href="#" title="Voir l'image dans une taille plus grande">
+						<figure>
+							<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
+						</figure>
+					</a>					
+					
+					<div id="info">
+
+						<p id="description">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, nobis, odit officiis dolorem temporibus autem est obcaecati ratione cum aliquam deserunt natus totam eum beatae ad enim provident ea nihil.
+						</p>
+						
+						<p>
+							<em id="prix">80€</em> <em id="stock">En Stock</em>
+						</p>
+
+					</div>
+
+					<form action="#" id="add">
+						<fieldset>
+
+							<label for="taille">Taille</label>
+							<select name="taille" id="taille">
+								<option value="S">S</option>
+								<option value="L">L</option>
+								<option value="M">M</option>
+								<option value="XL">XL</option>
+							</select>
+
+							<label for="coloris">Coloris</label>
+							<select name="coloris" id="coloris">
+								<option value="rouge">Rouge</option>
+								<option value="noir">Noir</option>
+								<option value="mauve">Mauve</option>
+								<option value="orange">Orange</option>
+							</select>
+
+							<label for="num">Nombre</label>
+							<input type="number" min="0" id="num" value="1" />
+
+							<input type="submit" value="Ajouter au panier">
+						</fieldset>
+					</form>
+					
+				</article>
+
+				<div id="sold">
+					
+					<h2>
+						Régulièrement vendu avec cet article
 					</h2>
 
 					<article class="left num_1">						
 
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
+						<a href="html/article.html" title="Plus d'information sur nom de l'article" class="produits">
 							<figure>
 								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
 							</figure>
@@ -149,7 +184,7 @@
 
 					<article class="right num_2">						
 
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
+						<a href="html/article.html" title="Plus d'information sur nom de l'article" class="produits">
 							<figure>
 								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
 							</figure>
@@ -171,7 +206,7 @@
 
 					<article class="left num_3">						
 
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
+						<a href="html/article.html" title="Plus d'information sur nom de l'article" class="produits">
 							<figure>
 								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
 							</figure>
@@ -193,7 +228,7 @@
 
 					<article class="right num_4">						
 
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
+						<a href="html/article.html" title="Plus d'information sur nom de l'article" class="produits">
 							<figure>
 								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
 							</figure>
@@ -213,95 +248,7 @@
 
 					</article>
 
-					<article class="left num_1">						
-
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
-							<figure>
-								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
-							</figure>
-						</a>
-
-						<h3>
-							Nom de l'article
-						</h3>
-
-						<p class="coloris">
-							Disponible en <b>x</b> coloris
-						</p>
-
-						<p class="prix">80€</p>
-
-						<a href="#" title="Ajouter au panier" class="pannier">Ajouter au panier</a>
-
-					</article>
-
-					<article class="right num_2">						
-
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
-							<figure>
-								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
-							</figure>
-						</a>
-
-						<h3>
-							Nom de l'article
-						</h3>
-
-						<p class="coloris">
-							Disponible en <b>x</b> coloris
-						</p>
-
-						<p class="prix">80€</p>
-
-						<a href="#" title="Ajouter au panier" class="pannier">Ajouter au panier</a>
-
-					</article>
-
-					<article class="left num_3">						
-
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
-							<figure>
-								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
-							</figure>
-						</a>
-
-						<h3>
-							Nom de l'article
-						</h3>
-
-						<p class="coloris">
-							Disponible en <b>x</b> coloris
-						</p>
-
-						<p class="prix">80€</p>
-
-						<a href="#" title="Ajouter au panier" class="pannier">Ajouter au panier</a>
-
-					</article>
-
-					<article class="right num_4">						
-
-						<a href="./article.html" title="Plus d'information sur nom de l'article" class="produits">
-							<figure>
-								<img src="http://placehold.it/230x300" alt="nom de l'article" title="nom de l'article" >
-							</figure>
-						</a>
-
-						<h3>
-							Nom de l'article
-						</h3>
-
-						<p class="coloris">
-							Disponible en <b>x</b> coloris
-						</p>
-
-						<p class="prix">80€</p>
-
-						<a href="#" title="Ajouter au panier" class="pannier">Ajouter au panier</a>
-
-					</article>
-
-				</section>
+				</div>
 
 			</section>
 			
@@ -322,4 +269,5 @@
 		</footer>
 
 	</body>
-</html>		
+
+</html>
